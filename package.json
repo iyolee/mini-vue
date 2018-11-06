@@ -1,0 +1,30 @@
+{
+  "name": "mini-vue",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyolee/mini-vue.git"
+  },
+  "author": "Jenkin Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iyolee/mini-vue/issues"
+  },
+  "homepage": "https://github.com/iyolee/mini-vue#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.2.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
