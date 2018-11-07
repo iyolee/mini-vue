@@ -23,7 +23,6 @@ const config = {
     ]
   },
   plugins: [
-    // 每次打包前，先清空原来目录中的内容
     new CleanWebpackPlugin([ASSETS_BUILD_PATH], { verbose: false })
   ]
 }

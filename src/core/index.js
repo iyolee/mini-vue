@@ -1,4 +1,5 @@
 import Compile from './compile'
+import Observer from './observer'
 
 class Vue {
   constructor(options) {
@@ -6,6 +7,8 @@ class Vue {
     this.$el = options.el
     this.$data = options.data
     this.$methods = options.methods
+
+    new Observer(this.$data)
 
     if (this.$el) {
       new Compile(this.$el, this)
