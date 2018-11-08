@@ -6,12 +6,11 @@ const SRC_PATH = path.resolve(__dirname, 'src/core')
 const ASSETS_BUILD_PATH = path.resolve(__dirname, 'dist/')
 
 const config = {
-  mode: 'production',
   context: SRC_PATH,
   entry: './index.js',
   output: {
     path: ASSETS_BUILD_PATH,
-    filename: 'vue.min.js'
+    filename: process.env.NODE_ENV === 'production' ? 'vue.min.js' : 'vue.js'
   },
   module: {
     rules: [

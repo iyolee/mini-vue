@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>{{person.name}}</p>
+    <p v-text="msg"></p>
+    <p>{{msg}}</p>
+    <p v-html="msg"></p>
+    <input type="text" v-model="msg">
+    <button v-on:click="clickMe">按钮</button>
+  </div>
+  <script type="text/javascript" src="./vue.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        msg: 'hello vue',
+        person: {
+          name: 'leeper'
+        }
+      },
+      methods: {
+        clickMe() {
+          this.msg = 'hello world',
+          this.person.name = 'Jenkin Lee'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

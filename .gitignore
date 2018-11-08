@@ -10,8 +10,6 @@ lib/jasmine_examples/*
 # MongoDB #
 data/
 
-test/
-
 # logs #
 middlewares/logs/log/
 

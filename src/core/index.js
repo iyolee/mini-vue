@@ -10,9 +10,30 @@ class Vue {
 
     new Observer(this.$data)
 
+    this.proxy(this.$data)
+    this.proxy(this.$methods)
+
     if (this.$el) {
       new Compile(this.$el, this)
     }
+  }
+
+  proxy(data) {
+    Object.keys(data).forEach(key => {
+      Object.defineProperty(this, key, {
+        enumerable: true,
+        configurable: true,
+        get() {
+          return data[key]
+        },
+        set(newValue) {
+          if (data[key] === newValue) {
+            return
+          }
+          data[key] = newValue
+        }
+      })
+    })
   }
 }
 
